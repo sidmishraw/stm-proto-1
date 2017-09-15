@@ -26,7 +26,6 @@ import java.util.concurrent.TimeUnit;
  */
 public class STM {
 	
-	
 	// ownerships
 	private static Map<Memory, Record>			ownerships		= new HashMap<>();
 	
@@ -93,7 +92,6 @@ public class STM {
 		
 		Thread tt = new Thread(new Runnable() {
 			
-			
 			@Override
 			public void run() {
 				
@@ -132,7 +130,6 @@ public class STM {
 		});
 		
 		Thread poller = new Thread(new Runnable() {
-			
 			
 			@Override
 			public void run() {
@@ -184,7 +181,6 @@ public class STM {
 	}
 	
 	static class Memory {
-		
 		
 		private static int	counter	= 0;
 		
@@ -253,12 +249,10 @@ public class STM {
 	@FunctionalInterface
 	interface TransactionOperation {
 		
-		
 		public void execute();
 	}
 	
 	static class Record implements Runnable {
-		
 		
 		static int	counter	= 0;
 		
